@@ -7,7 +7,6 @@
   * email:string
   * password_digest:string
   * remember_digest:string
-  * image_name:string
   * created_at:datetime
   * updated_at:datetime
   * admin:boolean
@@ -27,7 +26,12 @@
   * updated_at:datetime  
   
 ## メモ  
-User has_many :question, :answer  
-Question belongs :user  
-        　hasmany :answer  
-Answer belongs :user  
+User  
+    has_many :questions, :answers
+    has_one_attached :image
+     (ActiveStorageを使用)
+Question  
+    belongs :users  
+    hasmany :answers  
+Answer  
+    belongs :users   
