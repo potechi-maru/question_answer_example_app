@@ -42,7 +42,7 @@ Answer
 | --- | --- | --- | --- |
 | ユーザー登録画面を表示する | GET | /users/new | users#new |
 | ユーザー登録をする | POST | /users | users#create |
-| ログイン画面を表示する | GET | /login | users#login |
+| ログイン画面を表示する | GET | /login | sessions#new |
 | ログインする | POST | /login | sessions#create |
 | ログアウトする | DELETE | /logout | sessions#destroy |
 | 質問一覧を表示する（全て） | GET | /questions | questions#index |
